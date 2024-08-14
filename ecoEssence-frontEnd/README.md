@@ -71,10 +71,12 @@ ecoEssence-frontEnd/
 ├── src/
 │   ├── assets/          # Images, fonts, and other static assets
 │   ├── components/      # Reusable UI components
-│   ├── pages/           # Page components
 │   ├── context/         # React context for state management
+│   ├── layout/          # Layout components
+│   ├── pages/           # Page components
+│   ├── routes/          # Route components
 │   ├── index.css        # Tailwind CSS configurations
-│   └── App.jsx          # Main application component
+│   └── main.jsx         # Main application component
 ├── .env.local           # Environment variables
 └── package.json         # Project metadata and dependencies
 ```
