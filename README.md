@@ -150,8 +150,8 @@ EcoEssence is a full-stack, single-page application (SPA) designed to promote su
 
 **Day 1:**
 1. **Project Setup:**
-   - Initialize the MERN stack project with Git repositories.
-   - Set up the basic file structure for frontend and backend.
+   - <strike>Initialize the MERN stack project with Git repositories.</strike>
+   - <strike>Set up the basic file structure for frontend</strike> and backend.
    - Configure environment variables and connect the backend to MongoDB.
 
 2. **Backend Development:**
@@ -160,7 +160,7 @@ EcoEssence is a full-stack, single-page application (SPA) designed to promote su
    - Implement authentication endpoints using Firebase.
 
 3. **Frontend Development:**
-   - Build the initial layout of the Home Page, including the Navbar and Footer.
+   - <strike>Build the initial layout of the Home Page</strike>, including the Navbar and Footer.
    - Create the product grid on the Products Page with mock data.
    - Implement basic search and filter functionality.
 
