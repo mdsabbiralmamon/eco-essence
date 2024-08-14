@@ -181,7 +181,7 @@ EcoEssence is a full-stack, single-page application (SPA) designed to promote su
    - Deploy the frontend and backend to their respective platforms (Vercel/Netlify for frontend, Heroku for backend).
 
 4. **Final Touches:**
-   - Add a README file with setup instructions and project details.
+   - <strike>Add a README file with setup instructions and project details.</strike>
    - Ensure SEO optimization, performance enhancements, and accessibility considerations.
    - Submit the project repositories and live website link.
 
