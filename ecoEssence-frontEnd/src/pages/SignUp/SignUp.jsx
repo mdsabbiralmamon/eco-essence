@@ -14,7 +14,7 @@ const SignUp = () => {
 
     // send user data to database
     const sendUserDataToDatabase = (user) => {
-        fetch("http://localhost:5000", {
+        fetch("http://localhost:5000/api/users/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
