@@ -1,10 +1,14 @@
+const client = require("../config/database");
+
 const getUsers = async (req, res) => {
-    // Logic to get users from the database
-    const users = await req.db.collection("users").find().toArray();
+  try {
+    const users = await client.db("ecoEssenceDB").collection("users").find().toArray();
     res.json(users);
-  };
-  
-  module.exports = {
-    getUsers,
-  };
-  
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch users" });
+  }
+};
+
+module.exports = {
+  getUsers,
+};

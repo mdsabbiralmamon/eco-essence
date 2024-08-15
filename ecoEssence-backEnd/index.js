@@ -1,7 +1,10 @@
 const express = require("express");
 const cors = require("cors");
-const { MongoClient, ServerApiVersion } = require("mongodb");
 require("dotenv").config();
+const client = require("./config/database");
+const userRoutes = require("./routes/userRoutes");
+const rootRoute = require("./routes/rootRoute")
+const errorHandler = require("./utils/errorHandler");
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -19,44 +22,25 @@ app.use(
 );
 app.use(express.json());
 
-// mongoDB
-const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.wu8kmms.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
-
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  },
-});
-
-// ====================================
-//         Mongo DB Connection
-// ====================================
+// Connect to MongoDB and start the server
 async function run() {
   try {
-    // User collection
-    const userCollection = client.db("ecoEssenceDB").collection("users");
+    await client.connect();
+    console.log("Connected to MongoDB");
 
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log(
-      "Pinged your deployment. You successfully connected to MongoDB!"
-    );
-  } finally {
-    // Ensures that the client will close when you finish/error
-    // await client.close();
+    // Routes
+    app.use("/", rootRoute)
+    app.use("/api/users", userRoutes);
+
+    app.use(errorHandler); // Error handling middleware
+
+    // Start the server
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port}`);
+    });
+  } catch (err) {
+    console.error("Failed to connect to MongoDB", err);
   }
 }
+
 run().catch(console.dir);
-
-// routes
-app.get("/", (req, res) => {
-  res.send("Eco Essence server is running");
-});
-
-// listening port
-app.listen(port, () => {
-  console.log("Eco Essence server is listening on port " + port);
-});
