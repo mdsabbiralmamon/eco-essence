@@ -3,7 +3,9 @@ const cors = require("cors");
 require("dotenv").config();
 const client = require("./config/database");
 const userRoutes = require("./routes/userRoutes");
+const signUpUserRoute = require("./routes/signUpUserRoute");
 const rootRoute = require("./routes/rootRoute")
+const productsRoute = require("./routes/productsRoute");
 const errorHandler = require("./utils/errorHandler");
 
 const app = express();
@@ -31,6 +33,8 @@ async function run() {
     // Routes
     app.use("/", rootRoute)
     app.use("/api/users", userRoutes);
+    app.use("/api/users/signup", signUpUserRoute);
+    app.use("/api/products/allProducts", productsRoute);
 
     app.use(errorHandler); // Error handling middleware
 
