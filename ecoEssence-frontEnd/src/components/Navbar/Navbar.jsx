@@ -1,10 +1,27 @@
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 
 const Navbar = () => {
-    const navLinks = <>
-        <li><a>Home</a></li>
-    </>
+    const { user, logOutUser } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOutUser()
+            .then(() => {
+                // to-do: Alerts
+            })
+            .catch((error) => {
+                console.error("Logout failed", error);
+            });
+    };
+
+    const navLinks = (
+        <>
+            <li><a href="/">Home</a></li>
+        </>
+    );
+
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 container mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,22 +41,25 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        {
-                            navLinks
-                        }
+                        {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">EcoEssence</a>
+                <a className="text-xl">EcoEssence</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    {
-                        navLinks
-                    }
+                    {navLinks}
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                {user ? (
+                    <button className="btn btn-primary" onClick={handleLogOut}>Logout</button>
+                ) : (
+                    <>
+                        <a href="/signin" className="btn btn-primary">Login</a>
+                        <a href="/signup" className="btn btn-secondary ml-2">Sign Up</a>
+                    </>
+                )}
             </div>
         </div>
     );
