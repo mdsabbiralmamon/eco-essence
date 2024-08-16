@@ -14,7 +14,7 @@ const SignUp = () => {
 
     // send user data to database
     const sendUserDataToDatabase = (user) => {
-        fetch("http://localhost:5000/api/users/signup", {
+        fetch("https://eco-essence-back-end.vercel.app/api/users/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
