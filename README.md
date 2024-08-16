@@ -8,6 +8,11 @@ After going through this instruction module, I have come out with the idea of Ec
 
 ### **Project Overview: EcoEssence**
 
+---
+## Live Link: [Eco Essence](https://eco-essence.web.app/)
+## Backend Live Link: [Eco Essence](https://eco-essence-back-end.vercel.app/) 
+---
+
 #### **Project Name:**  
 EcoEssence - Sustainable & Eco-Friendly Products Marketplace
 
