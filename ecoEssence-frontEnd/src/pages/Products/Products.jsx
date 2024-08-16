@@ -22,7 +22,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       const response = await fetch(
-        `http://localhost:5000/api/products/allProducts?page=${page}&limit=${perPage}&sort=${sort}&search=${search}&brand=${brand}&category=${category}&minPrice=${minPrice}&maxPrice=${maxPrice}`
+        `https://eco-essence-back-end.vercel.app/api/products/allProducts?page=${page}&limit=${perPage}&sort=${sort}&search=${search}&brand=${brand}&category=${category}&minPrice=${minPrice}&maxPrice=${maxPrice}`
       );
       const data = await response.json();
       setProducts(data.products);
