@@ -83,21 +83,13 @@ ecoessence-backend/
 ## **API Endpoints**
 
 ### **Product Endpoints:**
-- `GET /api/products` - Fetch all products with pagination and filtering.
-- `GET /api/products/:id` - Fetch a single product by ID.
-- `POST /api/products` - Add a new product (admin only).
-- `PUT /api/products/:id` - Update a product by ID (admin only).
-- `DELETE /api/products/:id` - Delete a product by ID (admin only).
+- `GET /api/products/allProducts` - Fetch all products with pagination and filtering.
 
 ### **Authentication Endpoints:**
-- `POST /api/auth/register` - Register a new user.
-- `POST /api/auth/login` - Log in a user.
-- `POST /api/auth/google` - Log in with Google.
+- `POST /api/users/signup` - Register a new user.
 
-### **Order Endpoints:**
-- `GET /api/orders` - Fetch all orders (admin only).
-- `GET /api/orders/:userId` - Fetch orders for a specific user.
-- `POST /api/orders` - Create a new order.
+### **User Endpoints:**
+- `GET /api/users` - Fetch all users.
 
 ---
 
