@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div className="bg-gray-100">
             {/* Hero Section */}
-            <div className="h-[700px]">
+            <div className="h-[700px] z-10">
                 <Carousel />
             </div>
 
