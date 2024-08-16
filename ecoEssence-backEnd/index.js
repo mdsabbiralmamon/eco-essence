@@ -17,7 +17,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://eco-essence.web.app",
-      "https://eco-essence.firebaseapp.com/",
+      "https://eco-essence.firebaseapp.com",
     ],
     credentials: true,
   })
