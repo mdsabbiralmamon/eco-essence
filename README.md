@@ -146,44 +146,46 @@ EcoEssence is a full-stack, single-page application (SPA) designed to promote su
 
 ---
 
-### **Development Timeline:**
+### **Development Timeline:** 
+
+**NB: 🔴=> Not Touched. 🟡=> In development. 🟢=> Completed**
 
 **Day 1:**
 1. **Project Setup:**
-   - <strike>Initialize the MERN stack project with Git repositories.</strike>
-   - <strike>Set up the basic file structure for frontend and backend.</strike> 
-   - <strike>Configure environment variables and connect the backend to MongoDB.</strike> 
+   - 🟢Initialize the MERN stack project with Git repositories.
+   - 🟢Set up the basic file structure for frontend and backend. 
+   - 🟢Configure environment variables and connect the backend to MongoDB. 
 
 2. **Backend Development:**
-   - <strike>Create the product model in MongoDB</strike> with Mongoose.
-   - Develop RESTful APIs for fetching products, filtering, sorting, and pagination.
-   - Implement authentication endpoints using Firebase.
+   - 🟢Create the product model in MongoDB with Mongoose.
+   - 🟢Develop RESTful APIs for fetching products, filtering, sorting, and pagination.
+   - 🟢Implement authentication endpoints using Firebase.
 
 3. **Frontend Development:**
-   - <strike>Build the initial layout of the Home Page</strike>, including the Navbar and Footer.
-   - Create the product grid on the Products Page with mock data.
-   - Implement basic search and filter functionality.
+   - 🟢Build the initial layout of the Home Page, including the Navbar and Footer.
+   - 🟢Create the product grid on the Products Page with mock data.
+   - 🟢Implement basic search and filter functionality.
 
 **Day 2:**
 1. **Frontend Enhancements:**
-   - Complete the Product Details Page with all necessary information and features.
-   - Implement the quick view, wishlist, and sorting features.
-   - Develop the Profile Page, Cart Page, and Checkout Page.
+   - 🟢Complete the Product Details Page with all necessary information and features.
+   - 🟢Implement sorting features.
+   - 🔴Develop the Profile Page, Cart Page, and Checkout Page.
 
 2. **UI/UX Design:**
-   - Style all pages using Tailwind CSS, ensuring a consistent and responsive design.
-   - Add interactive elements like animations, dark mode, and hover effects.
-   - Integrate the blog section and about us content.
+   - 🟢Style all pages using Tailwind CSS, ensuring a consistent and responsive design.
+   - 🔴Add interactive elements like animations, dark mode, and hover effects.
+   - 🟢Integrate the blog section and about us content.
 
 3. **Testing & Deployment:**
-   - Conduct thorough testing of all functionalities, including authentication, product display, filtering, and checkout.
-   - Make at least 10 meaningful commits on both frontend and backend repositories.
-   - Deploy the frontend and backend to their respective platforms (Vercel/Netlify for frontend, Heroku for backend).
+   - 🟡Conduct thorough testing of all functionalities, including authentication, product display, filtering, and checkout.
+   - 🟢Make at least 10 meaningful commits on both frontend and backend repositories.
+   - 🟢Deploy the frontend and backend to their respective platforms (firebase for frontend, Vercel for backend).
 
 4. **Final Touches:**
-   - <strike>Add a README file with setup instructions and project details.</strike>
-   - Ensure SEO optimization, performance enhancements, and accessibility considerations.
-   - Submit the project repositories and live website link.
+   - 🟢Add a README file with setup instructions and project details.
+   - 🔴Ensure SEO optimization, performance enhancements, and accessibility considerations.
+   - 🟢Submit the project repositories and live website link.
 
 ---
 
